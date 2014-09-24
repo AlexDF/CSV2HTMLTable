@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+
+
+</body>
+
 <?php
 $row_num = 0;
 
@@ -40,3 +52,5 @@ foreach($records as $record) {
 echo "</table>";
 
 ?>
+
+</html>
