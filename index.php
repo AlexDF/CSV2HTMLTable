@@ -10,11 +10,18 @@
 
 </body>
 
+<form method="post" action="" enctype="multipart/form-data">
+  <input type="file" name="csvUpload"/>
+  <input type="submit" value="Generate Table"/>
+</form>
+
 <?php
+$fileDir = $_FILES[csvUpload]["tmp_name"];
+
 $row_num = 0;
 
 ini_set('auto_detect_line_endings', TRUE);
-if( ($handle = fopen("csv/mycsv.csv", "r")) !== FALSE ) {
+if( ($handle = fopen($fileDir, "r")) !== FALSE ) {
   
 
   while( ($row = fgetcsv($handle, 1000, ",")) != FALSE) {
@@ -32,7 +39,7 @@ if( ($handle = fopen("csv/mycsv.csv", "r")) !== FALSE ) {
 
 } // end if
 
-echo "<table>";
+echo '<table>';
 
 echo "<tr>";
 foreach($column_heading as $column){
