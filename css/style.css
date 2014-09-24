@@ -1,0 +1,14 @@
+th, td {
+  padding-left:10px;
+  padding-right:10px;
+  text-align:center;
+  font-size:80%;
+}
+
+table tr:nth-child(odd) {
+  background-color:rgba(100, 100, 100, 1);
+}
+
+table tr:nth-child(even) {
+  background-color:rgba(175, 175, 175, 1);
+}
