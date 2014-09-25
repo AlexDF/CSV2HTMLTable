@@ -12,3 +12,19 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
   background-color:rgba(175, 175, 175, 1);
 }
+
+#csvDrop {
+  width:400px;
+  height:250px;
+  opacity:0;
+}
+
+#csvDropContainer {
+  border:1px solid black;
+  width:400px;
+  height:250px;
+}
+
+#csvUpload {
+  border:1px solid black;
+}

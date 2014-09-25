@@ -11,12 +11,20 @@
 </body>
 
 <form method="post" action="" enctype="multipart/form-data">
-  <input type="file" name="csvUpload"/>
+  <input type="file" name="csvUpload" id="csvUpload"/>
+  <div id="csvDropContainer">
+    <input type="file" name="csvDrop" id="csvDrop"/>
+  </div>
   <input type="submit" value="Generate Table"/>
 </form>
 
 <?php
-$fileDir = $_FILES[csvUpload]["tmp_name"];
+//$fileDir = $_FILES[csvUpload]["tmp_name"] or $_FILES[csvDrop]["tmp_name"];
+if($_FILES[csvDrop]["tmp_name"]){
+  $fileDir = $_FILES[csvDrop]["tmp_name"];
+} else {
+  $fileDir = $_FILES[csvUpload]["tmp_name"];
+}
 
 $row_num = 0;
 
